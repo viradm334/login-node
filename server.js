@@ -12,7 +12,7 @@ connectDB();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.send('Hello world!');
 });
 
 app.use(authRoutes);
@@ -20,3 +20,5 @@ app.use(authRoutes);
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+module.exports = app;
